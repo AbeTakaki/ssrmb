@@ -18,6 +18,9 @@ var rootCmd = &cobra.Command{
 	Use:   "ssrmb",
 	Short: "スクリーンショットの整理と削除を実行します。",
 	Long:  `スクリーンショットフォルダにある画像を日付ごとに振り分けます。指定がある場合は古いフォルダを削除します。`,
+	Run: func(cmd *cobra.Command, args []string) {
+		runCmd.Run(cmd, args)
+	},
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
