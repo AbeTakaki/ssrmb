@@ -18,7 +18,7 @@ Cobra フレームワークを採用しております。
 2. ダウンロードしたファイルを任意のフォルダに配置します。
 3. コマンドプロンプトまたは PowerShell を開き、配置したフォルダへ移動して実行します。
 ```bash
-.\ssrmb.exe run
+.\ssrmb.exe
 ```
 ### ビルド
 Go がインストールされている環境でビルドします。
@@ -32,13 +32,13 @@ go build -o ssrmb.exe main.go
 ```
 
 ## 使い方
-メインコマンド ```run``` を使用して整理・清掃を開始します。
+```ssrmb``` を使用して整理・清掃を開始します。
 
 ### 1. 画像の整理のみを実行
 フォルダ内の画像を日付ごとに仕分けます。
 
 ```bash
-.\ssrmb.exe run
+.\ssrmb.exe
 ```
 
 ### 古いフォルダを削除（クリーンアップ）
@@ -47,20 +47,24 @@ go build -o ssrmb.exe main.go
 - 14日以上前のフォルダを消す場合:
 
 ```bash
-.\ssrmb.exe run --rmd 14
+.\ssrmb.exe --rmd 14
+# 短縮形
+.\ssrmb.exe -d 14
 ```
 
 - 3ヶ月以上前のフォルダを消す場合:
 
 ```bash
-.\ssrmb.exe run --rmm 3
+.\ssrmb.exe --rmm 3
+# 短縮形
+.\ssrmb.exe -m 3
 ```
 
 ### 3. ヘルプの表示
 利用可能なオプションを確認できます。
 
 ```bash
-.\ssrmb.exe run --help
+.\ssrmb.exe --help
 ```
 
 ## 🛠 コマンド体系
